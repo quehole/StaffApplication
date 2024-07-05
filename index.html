@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <title>Staff Application - Coding4Nothing</title>
+</head>
+
+<body>
+  <center>
+    <form onsubmit="sendMessage()">
+      <div class="mb-3 w-50 text-start">
+        <label for="username" class="form-label">Username: </label>
+        <input required type="text" id="username" placeholder="Username" class="form-control"
+          aria-describedby="usernameInfo">
+        <div id="usernameInfo" class="form-text">Put your Discord Username here! (Ex: Ruler)</div>
+      </div>
+      <div class="mb-3 w-50 text-start">
+        <label for="usertag" class="form-label">User Tag: </label>
+        <input required type="number" id="usertag" placeholder="User Tag" class="form-control"
+          aria-describedby="usertagInfo" maxlength="4">
+        <div id="usertagInfo" class="form-text">Put your Discord Tag (Discriminator) here! (Ex: 0001)</div>
+      </div>
+      <div class="mb-3 w-50 text-start">
+        <label for="userID" class="form-label">User ID: </label>
+        <input required type="number" id="userID" placeholder="User ID" class="form-control"
+          aria-describedby="userIDInfo" maxlength="18">
+        <div id="userIDInfo" class="form-text">Put your Discord User ID here! (Ex: 689365349971525644)</div>
+      </div>
+      <div class="mb-3 w-50 text-start">
+        <label for="reason" class="form-label">How did you find this server? </label>
+        <input required type="text" id="reason" placeholder="How did you find the server?" class="form-control"
+          aria-describedby="reasonInfo" list="banReasons">
+        <div id="reasonInfo" class="form-text">Put how you got in to this server (Ex: YouTube)<br>NOTE: Write
+          another appropriate reason, if the reason is not mentioned.</div>
+      </div>
+      <div class="mb-3 w-50 text-start">
+        <label for="appeal" class="form-label">Why do you want to join us? </label>
+        <input required type="text" id="appeal" placeholder="Short paragraph about why do you want to join us." class="form-control"
+          aria-describedby="appealInfo">
+        <div id="appealInfo" class="form-text">Write what you will and will not do if you get in to the staff team, in the most
+          appealing, yet true way.</div>
+      </div>
+      <button id="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </center>
+  <datalist id="banReasons">
+    <option>YouTube</option>
+    <option>Invitation from friend</option>
+    <option>Other</option>        
+  </datalist>                                                               
+  <style>
+    body {
+      background: #333333;
+    }
+
+    .form-control {
+      background-color: #898989;
+    }
+
+    .form-control::-webkit-input-placeholder {
+      color: white;
+    }
+
+    .form-label {
+      color: white;
+    }
+  </style>
+  <script src="./index.js"></script>
+</body>
+
+</html>
